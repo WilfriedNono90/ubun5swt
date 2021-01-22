@@ -31,7 +31,7 @@ public class Main {
 			wahl = new Scanner(System.in).nextInt();
 			
 			switch (wahl) {
-			case 0: start = false;
+			case 0: System.out.println("goodbye");start = false;
 				    break;
 			case 1: 
 					mitarbeiterList.add(new Mitarbeiter());
@@ -98,7 +98,7 @@ public class Main {
 		
 		Mitarbeiter mitarbeiter = findMitarbeiterById(mitarbeiternummer);
 		Projekt projekt = findProjektbyId(projeknummer);
-		mitarbeiter.projektHinfuegen(projekt);
+		mitarbeiter.projektHinfuegen2(projekt);
 		
 	}
 

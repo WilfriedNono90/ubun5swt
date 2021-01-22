@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import projekte.Mitarbeiterinterface;
 import projekte.Projekt;
 
-public class Mitarbeiter {
+
+
+public class Mitarbeiter implements Mitarbeiterinterface{
 	private int minr ;
 	private String name;
-	private List<Projekt> projekte = projekte = new ArrayList<Projekt>();
+	private List<Projekt> projekte = projekte = new ArrayList<>();
 	
 	public Mitarbeiter() {
 		System.out.println("Nummer des Mitarbeiter eingeben");
@@ -30,6 +33,13 @@ public class Mitarbeiter {
 	
 	public void projektHinfuegen(Projekt p) {
 		projekte.add(p);
+		
+	}
+	
+	public void projektHinfuegen2(Projekt p) {
+		projekte.add(p);
+		p.bearbeiterHinfuegen(this);
+		
 	}
 	
 	public void projektLoeschen(Projekt p) {
